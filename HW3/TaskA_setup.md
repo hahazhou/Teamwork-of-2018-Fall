@@ -19,6 +19,8 @@
 > dataDir=E:\\Kafka\kafka_2.11-2.0.1\zookeeper
 ## 启动Kafka服务
 * 启动zookeeper  
-在cmd下进入zookeeper的解压目录下，输入zkServer，最终得到以下结果  
+在cmd下进入zookeeper的解压目录下，输入zkServer，得到以下结果  
 ![img0](img0.png)
-
+* 启动kafka
+开启新的cmd，进入kafka解压目录下，输入.\bin\windows\kafka-server-start.bat .\config\server.properties，得到以下结果  
+![img1](img1.png)
