@@ -22,5 +22,14 @@
 在cmd下进入zookeeper的解压目录下，输入zkServer，得到以下结果  
 ![img0](img0.png)
 * 启动kafka
-开启新的cmd，进入kafka解压目录下，输入.\bin\windows\kafka-server-start.bat .\config\server.properties，得到以下结果  
+创建一个新的cmd，进入kafka解压目录下，输入.\bin\windows\kafka-server-start.bat .\config\server.properties，得到以下结果  
 ![img1](img1.png)
+## 测试
+* 创建topic
+创建一个新的cmd，进入kafka解压目录下，输入.\bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic kafka-test
+![img2](img2.png)
+* 启动producer
+在当前cmd中，输入.\bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic kafka-test
+* 启动consumer
+创建一个新的cmd，进入kafka解压目录下，输入.\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic kafka-test --from-beginning  
+consumer中如果得到producer中输入的消息，表明测试成功。
