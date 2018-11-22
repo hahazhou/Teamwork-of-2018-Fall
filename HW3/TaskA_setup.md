@@ -14,4 +14,11 @@
 * kafka配置文件修改  
 使用notepad++打开kafka_2.11-2.0.1\config文件夹中的server.properties修改
 > log.dirs=E:\\Kafka\kafka_2.11-2.0.1\logs  
-使用
+* kafka配置文件修改  
+使用notepad++打开kafka_2.11-2.0.1\config文件夹中的zookeeper.properties修改
+> dataDir=E:\\Kafka\kafka_2.11-2.0.1\zookeeper
+## 启动Kafka服务
+* 启动zookeeper  
+在cmd下进入zookeeper的解压目录下，输入zkServer，最终得到以下结果  
+![img0](img0.png)
+
