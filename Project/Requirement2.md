@@ -68,5 +68,9 @@
 #### 查看DNS状态
     nslookup kubernetes.default
 得到结果
-![图片](pics/img6.png)
+    
+    Server:    10.92.0.10
+    Address 1: 10.92.0.10
+    Name:      kubernetes.default
+    Address 1: 10.92.0.1
 
