@@ -53,12 +53,12 @@
 ![图片](pics/img2.png)
 #### 查看服务状态
     kubectl get pod -o wide --all-namespaces
-得到结果
+得到结果  
 ![图片](pics/img3.png)
 ### Dashboard
 #### 查看token值
     kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep kubernetes-dashboard-token|awk '{print $1}')|grep token:|awk '{print $2}'
-得到结果
+得到结果  
 ![图片](pics/img4.png)
 #### 使用token登录
 打开浏览器输入地址https://127.0.0.1:32000/ ，选择token登录，将刚刚运行得到的token值复制进去.  
