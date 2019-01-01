@@ -65,5 +65,8 @@
 最终进入Dashboard  
 ![图片](pics/img5.png)
 ### DNS
-
+#### 查看DNS状态
+    nslookup kubernetes.default
+得到结果
+![图片](pics/img6.png)
 
