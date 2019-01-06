@@ -30,30 +30,30 @@ mysql-dep.yaml文件用来创建一个deployment和pod
 
 --运行mysql-dep.yaml
 
-![img](1.jpg)
+![img](requirement-3/1.jpg)
 
 --查看创建好的deployment
 
-![img](2.jpg)
+![img](requirement-3/2.jpg)
 
 注：都是1表示运行正常
 
 --查看RS的运行情况
 
-![img](3.jpg)
+![img](requirement-3/3.jpg)
 
 注：都是1表示运行正常
 
 --查看pod的运行情况
 
-![img](4.jpg)
+![img](requirement-3/4.jpg)
 
 注：READY的值是1/1，并且STATUS的值是Running，表示运行正常
 由于Pod的创建需要花费一些时间，在还没有创建好容器时，STATUS的状态会是ContainerCreating，表示正在创建容器，这时只需要等待。Pod创建好后，STATUS的状态会是Running，这时可以通过docker ps命令查看容器运行的情况。
 
 --查看容器的运行情况
 
-![img](5.jpg)
+![img](requirement-3/5.jpg)
 
 mysql-svc.yaml用来创建一个service，从而使其他的容器的可以访问这个pod
 
@@ -61,11 +61,11 @@ mysql-svc.yaml用来创建一个service，从而使其他的容器的可以访�
 
 --执行mysql-svc.yaml
 
-![img](6.jpg)
+![img](requirement-3/6.jpg)
 
 --查看创建的service
 
-![img](7.jpg)
+![img](requirement-3/7.jpg)
 
 kubernetes会给Service分配一个Cluster IP，这是个虚拟IP地址，此后集群中的其他新创建的Pod就可以通过此Cluster IP+端口号的方式来连接和访问mysql服务了。
 
