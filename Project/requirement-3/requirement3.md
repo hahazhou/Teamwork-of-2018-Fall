@@ -73,7 +73,7 @@ kubernetes会给Service分配一个Cluster IP，这是个虚拟IP地址，此后
 
 需要文件:myweb-dep.yaml、myweb-svc.yaml
 
-创建过程同mysql类似
+创建过程同mysql类似，注意在myweb-dep.yaml中的mysql的IP地址要换成建好mysql service 的cluster IP
 
 三、通过浏览器访问
 
