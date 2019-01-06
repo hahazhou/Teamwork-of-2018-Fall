@@ -69,6 +69,13 @@ mysql-svc.yaml用来创建一个service，从而使其他的容器的可以访�
 
 kubernetes会给Service分配一个Cluster IP，这是个虚拟IP地址，此后集群中的其他新创建的Pod就可以通过此Cluster IP+端口号的方式来连接和访问mysql服务了。
 
+※向kubernetes的MySQL中添加数据
+[root@andyxu-test ~]# docker exec -it [docker中mysql的container ID] /bin/bash
+
+root@[mysql在kubernetes中Pod name]:/# mysql 或者 mysql -uroot -p[password]
+
+然后就进去mysql了，就可以正常建数据库，添加数据了
+
 二、创建并配置tomcat容器
 
 需要文件:myweb-dep.yaml、myweb-svc.yaml
