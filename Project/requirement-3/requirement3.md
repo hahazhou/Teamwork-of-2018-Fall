@@ -9,6 +9,14 @@
 
 3、把web项目打包成一个镜像，并push到DaoCloud，保证可以成功pull the image
 
+4、修改docker的源为国内的地址
+
+#curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2.m.daocloud.io
+
+执行上面的命令，然后如果发现dockers运行有问题，报如下的错误：Job for docker.service failed because the control process exited with error code. See "systemctl status docker.service" and "journalctl -xe" for details.
+
+解决办法：在这个文件中/etc/docker/daemon.json {"registry-mirrors": ["http://****.m.daocloud.io"]，} 最后一个多了一个逗号，把逗号去掉以后，程序应该可以正常启动。
+
 
 ### 部署过程
 
@@ -69,5 +77,5 @@ kubernetes会给Service分配一个Cluster IP，这是个虚拟IP地址，此后
 
 三、通过浏览器访问
 
-在地址栏中输入主机IP+端口号就可以访问
+在地址栏中输入myweb所在的nodeIP+端口号就可以访问
 

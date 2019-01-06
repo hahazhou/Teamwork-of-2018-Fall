@@ -16,21 +16,9 @@ spec:
     spec:
       containers:
       - name: myweb
-        image: daocloud.io/yuxinru/yuxinru:master-85df
-        volumeMounts:
-        - name: time-zone
-          mountPath: /etc/localtime
-        - name:tomcat-logs
-          mountPath: /user/local/tomcat/logs
+        image: daocloud.io/changeyoung/cicd
         ports:
         - containerPort: 8080
         env:
         - name: MYSQL_SERVICE_HOST
           value: '10.104.47.106'       #需要修改自己MySQL服务的cluster IP
-      volumes:
-      - name: time-zone
-        hostPath:
-          path: /etc/localtime
-      - name: tomcat-logs
-        hostPath:
-          path: /data/tomcat/logs
