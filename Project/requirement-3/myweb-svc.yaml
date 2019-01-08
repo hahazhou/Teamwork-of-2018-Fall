@@ -3,9 +3,9 @@ kind: Service
 metadata:
   name: myweb
 spec:
-  type:NodePort
+  type: NodePort
   ports:
     - port: 8080
-      nodePort: 8888
+      nodePort: 30001
   selector:
     app: myweb
